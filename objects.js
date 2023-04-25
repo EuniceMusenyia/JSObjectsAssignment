@@ -42,7 +42,7 @@ const students = [
 function studentsAverageScores() {
     let averageScore=[]
     for (let i = 0; i < students.length; i++) {
-        let avg = students[i].scores.reduce((total,next) =>) total+next) /students[i].scores.length;
+        let avg = students[i].scores.reduce((total,next) => total +next) /students[i].scores.length;
         if (avg>=85) {
             averageScore.push(students[i].name)
             
@@ -57,12 +57,18 @@ console.log(studentsAverageScores());
 // and a method to display the car's information, write a function that takes the car object
 //  and adds a new method to the object called age.
 //  The age method should return the current age of the car based on the current year and the car's year property.
-// const car = {
-//   make: 'Ford',
-//   model: 'Ranger',
-//   year: 2023,
-//   displayInfo: function() {
-//     console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
-//   },
-// };
+const car = {
+  make: 'Ford',
+  model: 'Ranger',
+  year: 2023,
+  displayInfo: function() {
+    console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
+  },
+};
+function carObject(newYear) {
+   car.age = newYear-car["year"]
+    
+}
+carObject(2025)
+console.log(car);
 
